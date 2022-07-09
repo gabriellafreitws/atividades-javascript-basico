@@ -1,3 +1,3 @@
-# atividades-javascript
+# atividades-javascript-basico
 Atividades de JavaScript propostas pelo professor Gustavo Guanabara <br>
 https://gustavoguanabara.github.io/javascript/exercicios/
