@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o prompt e o alert</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados - 1</h1>
+    <button onclick="inicio()">Clique para começar</button> <!---o html já disponibiliza a atividade onclick, então se cria uma função dentro dela-->
+    <script>
+        function inicio(){ //chama a função
+            let nome = window.prompt('Qual seu o nome?') //prompt recebe informaçoes (inputs), window faz com que esse prompt venha numa janelinha
+            window.alert(`Olá, ${nome}! É um prazer te conhecer!`) //retorna uma janela com a resposta do prompt
+        }
+    </script>
+</body>
+</html>

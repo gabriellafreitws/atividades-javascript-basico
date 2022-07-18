@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com partes do html</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados - 2</h1>
+    <button onclick="inicio()">Clique para começar</button> <!---o html já disponibiliza a atividade onclick, então se cria uma função dentro dela-->
+    <section id="resultado"> <!--cria id pro resultado-->
+        <p>Aqui vai aparecer o resultado do prompt</p>
+    </section>
+    <script>
+        function inicio() { //chama a função
+            let nome = window.prompt('Qual o seu nome?') //abre um prompt onde a respota é o let nome
+            let res = window.document.getElementById('resultado') //define o let res e pede um getelementbyib em relação ao id resultado
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;` //pega o res e redefine a mensagem que aparece no id resultado (o &#x1F596 é um emoji)
+        }
+    </script>
+    
+</body>
+</html>
