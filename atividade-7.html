@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Media do aluno</h1>
+    <button onclick="media()">Calcular média</button>
+    <section id="situacao">
+        <p>O resultado vai aparecer aqui:</p>
+    </section>   
+    <script>
+        function media() {
+            let nom = window.prompt('Qual o nome do aluno?') //não precisa dizer que é num pq é string
+            let n1 = Number(window.prompt(`Qual a primeira nota do(a) ${nom}?`))
+            let n2 = Number(window.prompt(`Além de ${n1}, qual a segunda nota do(a) ${nom}?`))
+            let n3 = Number(window.prompt(`Além de ${n1} e ${n2}, qual a terceira nota do(a) ${nom}?`))
+            med = (n1+n2+n3)/3 //adicionei mais uma nota pq geralmente são 3 :)
+
+            let res = document.getElementById('situacao')
+            res.innerHTML = `<p>Calculando a média final de <mark>${nom}</mark>.</p>`
+            res.innerHTML += `<p>As notas obtidas foram <mark>${n1}, ${n2} e ${n3}</mark>.</p>` 
+            res.innerHTML += `<p>A média final será <mark>${med}</mark>.</p>`
+        }
+    </script>
+</body>
+</html>
