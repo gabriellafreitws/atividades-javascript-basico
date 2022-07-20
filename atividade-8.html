@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calcular()">Clique aqui para calcular</button>
+    <section id="result">
+        <p>O resultado vai aparecer aqui:</p>
+    </section>
+    <script>
+        function calcular() {
+            let num = Number(window.prompt('Digite um número: '))
+            
+            let res = document.querySelector('section#result')
+            res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`
+            res.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>` // returns the absolute value of a number
+            res.innerHTML += `<p>A sua parte inteira é ${Math.trunc(num)}</p>` //returns the integer part of a number by removing any fractional digits
+            res.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(num)}</p>`//returns the value of a number rounded to the nearest integer
+            res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>`//returns the square root of a number
+            res.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}</p>` //returns the cube root of a number       
+            res.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}</p>` //raiz de dois
+            res.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}</p>` //raiz de tres  
+        }
+    </script>
+    
+</body>
+</html>
